@@ -14,6 +14,10 @@ connectDB();
 
 app.use('/api/users', authRoutes);
 
+app.get('/', (req,res) => {
+    res.send('HOOOD authentication API is running');
+})
+
 const PORT = process.env.PORT || 1337;
 
 app.listen(PORT, () => {
